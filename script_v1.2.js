@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
           });
           showAllBtn.textContent = "CLOSE"; // Change button text to "CLOSE"
       }
-  });
+  }); 
 });
 
 
