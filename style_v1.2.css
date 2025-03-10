@@ -260,13 +260,13 @@ width: 100%; /* Adjust width as needed */
 
 @media only screen and (max-width: 500px){
 
-  button {
+    button {
     font-size: 13px;
   }
-  
+
   #topBtn {
     bottom: 15px;
-    right: 30px;
+    right: 20px;
   }
 }
 
@@ -274,6 +274,15 @@ width: 100%; /* Adjust width as needed */
 @media only screen and (max-width: 500px){
   #fullscreen-btn {
     display: none;
+    }
+
+    .zoom-button-container {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      right: 20px;
+      bottom: 50%;
+      gap:5px;
     }
 }
 
@@ -283,15 +292,14 @@ width: 100%; /* Adjust width as needed */
 
 
 .colophone {
-  font-size: 0.8rem;
   z-index: 9999;
   margin-left: 20px;
   margin-top: 100vh;
   margin-bottom: 10px;
   margin-right: 50px;
-  color: var(--yyy-gray)
+  color: var(--yyy-gray);
+  line-height: 1.2rem;
 }
-
 
 video {
   pointer-events: none;  /* タップ操作を無効化 */
