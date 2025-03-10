@@ -628,11 +628,36 @@ function scrollToTop() {
 
 
 
-// to privent full screen video
- {
-  document.querySelector('video').addEventListener('fullscreenchange', (event) => {
-    if (document.fullscreenElement) {
-        document.exitFullscreen();
-    }
+ // Prevent fullscreen video
+
+
+document.addEventListener("click", function(event) {
+  if (event.target.tagName.toLowerCase() === "video") {
+      event.preventDefault(); 
+  }
 });
+
+
+
+
+function addImage(event) {
+  const galleryContainer = document.querySelector(".gallery");
+
+  galleryItems.forEach(item => {
+      let element;
+      if (item.type === "video") {
+          element = document.createElement("video");
+          element.setAttribute("src", item.src);
+          element.setAttribute("playsinline", "true");  // Prevent fullscreen on mobile
+          element.setAttribute("muted", "true");  // Ensure autoplay works
+          element.setAttribute("autoplay", "true");
+          element.setAttribute("loop", "true");
+          element.setAttribute("controls", "true"); // Optional, if you need controls
+      } else {
+          element = document.createElement("img");
+          element.setAttribute("src", item.src);
+      }
+      
+      galleryContainer.appendChild(element);
+  });
 }
