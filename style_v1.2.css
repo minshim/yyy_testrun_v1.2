@@ -281,7 +281,7 @@ width: 100%; /* Adjust width as needed */
       flex-direction: column;
       position: fixed;
       right: 20px;
-      bottom: 50%;
+      bottom: 45%;
       gap:5px;
     }
 }
