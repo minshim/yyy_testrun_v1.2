@@ -1,0 +1,298 @@
+@font-face {
+  font-family: 'Routed Gothic';
+  src: url('/bau/fonts/routed-gothic.woff2') format('woff2'),
+  url('/bau/fonts/routed-gothic.ttf') format('truetype'); /* Fallback */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --yyy-gray: #6a6a6a;
+  --yyy-bg: #e5e5e5;
+}
+
+
+body {
+  display: block;
+  overflow: visible !important;
+  -webkit-font-smoothing: antialiased;
+  color: rgb(42, 42, 42);
+  background-color: var(--yyy-bg);
+  font-family: sans-serif;
+  font-size :12px; 
+}
+
+:lang(jp) {
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 12px;
+}
+
+a:active {
+  color: inherit; /* クリック時の色を変えない */
+}
+
+.yyy-logo {
+  position: fixed;
+  top: 60%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 40px; /* 画像サイズに調整 */
+  height: 40px;
+  background: url("bau/img/YYY-logo.svg") no-repeat center;
+  background-size: contain;
+  z-index: 9999; /* 最前面に配置 */
+  background-color: var(--yyy-bg);
+}
+
+.yyy-logo:hover {
+  background-blend-mode: none;
+}
+
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px; 
+  height: 80px;
+  background: url("bau/img/YYY-logo.svg") no-repeat center;
+  background-size: contain;
+  z-index: 9999; 
+  pointer-events: none; 
+} */
+
+.gallery-container {
+  width: 100%;  /* Always 100% of the viewport width */
+  margin-top: 60px;
+  margin-bottom: 0;
+  margin-left: 0px;
+  height: 100%;
+  transform-origin: left top;
+  justify-content: center; /* Center the gallery */
+  position: relative;
+  overflow: hidden; /* Prevent horizontal scrolling */
+  overflow: overlay;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap */
+  justify-content: flex-start; /* Float images when zoomed out */
+  position: relative;
+  cursor: default;
+  margin-top: 0;
+  margin-bottom: 0px;
+  margin-left: 0;
+  width: 100%;  /* Ensures gallery takes full width */
+  overflow: hidden;  /* Prevents scrolling */
+}
+
+.gallery img {
+  display: block; /* Allow the images to float */
+  width: 100%;  /* Let images scale naturally */
+  height: auto;  
+  cursor: pointer;
+}
+
+
+.title {
+  position: relative;
+  margin-bottom: 8px;
+  margin-left: 40px;
+  margin-right: 20px;
+ font-size :12px; 
+ cursor: pointer;
+  color: var(--yyy-gray);
+  height: 17px; 
+}
+
+.details {
+  display: inline;
+  opacity: 0;
+  margin-left: 20px;
+  transition: opacity 0.1s ease;
+}
+
+.details {
+  display: inline;
+}
+ 
+/* shows detail hover */
+.title:hover .details {
+display: inline;
+opacity: 1;
+}
+
+@media only screen and (max-width: 500px){
+  .title {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+
+
+  .title:hover .details {
+    display: none;
+    }
+  
+    .details {
+      display: block; /* Forces it to go to the next line */
+      margin-left: 0;
+          }
+              }
+
+
+
+
+/* detail keep showing */
+.title.clicked .details {
+display: inline;
+opacity: 1;
+}
+
+@media only screen and (max-width: 500px){
+  .title.clicked .details {
+    display: block;
+}
+}
+
+figure {
+  float: left;
+  width: 20vw;
+  text-align: left;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  text-align: left;
+  opacity: 0; 
+  animation: fadeIn 0.2s ease-in forwards;
+  
+}
+
+
+@media only screen and (max-width: 900px){
+  figure {
+    width:33.33vw;
+    }
+
+
+}
+
+@media only screen and (max-width: 500px){
+  figure {
+    width:50vw;
+    }
+}
+
+figure:last-child {
+  margin-bottom: 40px;
+}
+
+.gallery video {
+  width: 80%; 
+  height: auto; 
+}
+
+/* figure fadein animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* after fade in */
+.gallery figure.visible {
+  opacity: 1; 
+}
+
+/* no animation with refreshing */
+figure.no-animation {
+  opacity: 1; 
+  animation: none; 
+}
+
+
+
+
+/* button design */
+button {
+  font-family: 'Routed Gothic', sans-serif;
+  border: 0px;
+  background-color: #ffffff;
+  color: var(--yyy-gray);
+  padding: 3px 9px;
+  border-radius: 4px;
+  z-index: 9999;
+}
+
+/* button */
+.btn_nav {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 10px;
+  left: 15px;
+  width: 100%;
+  align-content: center;
+  gap: 4px;
+}
+
+#order-btn {
+}
+
+#reset-button {
+}
+
+/* button design */
+.btn_footer {
+position: relative;
+width: 100%; /* Adjust width as needed */
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+@media only screen and (max-width: 500px){
+  #topBtn {
+    bottom: 15px;
+    right: 30px;
+  }
+}
+
+
+@media only screen and (max-width: 500px){
+  #fullscreen-btn {
+    display: none;
+    }
+}
+
+.hidden {
+  display: none;
+}
+
+
+.colophone {
+  font-size: 0.8rem;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-top: 100vh;
+  margin-bottom: 10px;
+  margin-right: 50px;
+  color: var(--yyy-gray)
+}
+
+
+
+
