@@ -114,16 +114,11 @@ a:active {
 }
 
 .details {
-  display: inline;
-  opacity: 0;
-  margin-left: 20px;
-  transition: opacity 0.1s ease;
+display: inline;
+opacity: 0;
+margin-left: 20px;
 }
 
-.details {
-  display: inline;
-}
- 
 /* shows detail hover */
 .title:hover .details {
 display: inline;
@@ -131,21 +126,20 @@ opacity: 1;
 }
 
 @media only screen and (max-width: 500px){
-  .title {
-    margin-left: 20px;
-    margin-bottom: 20px;
-  }
+.title {
+margin-left: 20px;
+margin-bottom: 20px;
+}
 
+.title:hover .details {
+display: block;
+}
 
-  .title:hover .details {
-    display: none;
-    }
-  
-    .details {
-      display: block; /* Forces it to go to the next line */
-      margin-left: 0;
-          }
-              }
+.details {
+display: block; /* Forces it to go to the next line */
+margin-left: 0;
+}
+}
 
 
 
