@@ -48,6 +48,7 @@ a:active {
   background-size: contain;
   z-index: 9999; /* 最前面に配置 */
   background-color: var(--yyy-bg);
+  cursor: pointer;
 }
 
 .yyy-logo:hover {
