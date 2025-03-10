@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Routed Gothic';
-  src: url('/bau/fonts/routed-gothic.woff2') format('woff2'),
-  url('/bau/fonts/routed-gothic.ttf') format('truetype'); /* Fallback */
+  src: url('/fonts/routed-gothic.woff2') format('woff2'),
+  url('/fonts/routed-gothic.ttf') format('truetype'); /* Fallback */
   font-weight: normal;
   font-style: normal;
 }
