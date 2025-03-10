@@ -267,7 +267,7 @@ width: 100%; /* Adjust width as needed */
 @media only screen and (max-width: 500px){
 
   button {
-    font-size: 14.5px;
+    font-size: 13px;
   }
   
   #topBtn {
@@ -297,6 +297,12 @@ width: 100%; /* Adjust width as needed */
   margin-right: 50px;
   color: var(--yyy-gray)
 }
+
+video {
+  pointer-events: none;
+}
+
+
 
 
 
