@@ -393,6 +393,11 @@ function addImage(event) {
       newVideo.muted = true;    // 無音
       newVideo.loop = false;    // ループなし
       newVideo.controls = false; // コントロールを非表示（残り秒数等も非表示）
+newVideo.setAttribute("playsinline", "true");  // ← スマホでフルスクリーン防止
+newVideo.setAttribute("webkit-playsinline", "true");  // ← iOS対策
+newVideo.removeAttribute("controls");  // ← コントロールUIを完全に削除
+newVideo.style.overflow = "hidden";
+newVideo.style.pointerEvents = "none";  // ← タップによるフルスクリーン化を防止
       
       // スクロールバーを非表示にするためのスタイル設定
       newVideo.style.overflow = "hidden";  // 動画が表示される部分以外にスクロールバーが出ないようにする
@@ -581,10 +586,14 @@ function addImage(event) {
       newVideo.autoplay = true;
       newVideo.muted = true;
       newVideo.loop = false;
+newVideo.setAttribute("playsinline", "true");  // ← スマホでフルスクリーン防止
+newVideo.setAttribute("webkit-playsinline", "true");  // ← iOS対策
+newVideo.removeAttribute("controls");  // ← コントロールUIを完全に削除
+newVideo.style.overflow = "hidden";
+newVideo.style.pointerEvents = "none";  // ← タップによるフルスクリーン化を防止
       newVideo.controls = false;
       newVideo.style.overflow = "hidden";
       newFigure.appendChild(newVideo);
-      newVideo.setAttribute("playsinline", "true"); 
     } else {
       const newImage = document.createElement("img");
       newImage.src = images[currentIndex].src;
