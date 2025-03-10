@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           details.forEach(function (detail) {
               detail.style.opacity = "0"; // Hide details
           });
-          showAllBtn.textContent = "OPEN"; // Change button text to "OPEN"
+          showAllBtn.textContent = "OPEN ALL"; // Change button text to "OPEN"
       } else {
           // Show all galleries and details
           galleries.forEach(function (gallery) {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
           details.forEach(function (detail) {
               detail.style.opacity = "1"; // Show details
           });
-          showAllBtn.textContent = "CLOSE"; // Change button text to "CLOSE"
+          showAllBtn.textContent = "CLOSE ALL"; // Change button text to "CLOSE"
       }
   });
 });
