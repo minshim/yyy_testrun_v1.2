@@ -265,6 +265,11 @@ width: 100%; /* Adjust width as needed */
 }
 
 @media only screen and (max-width: 500px){
+
+  button {
+    font-size: 14.5px;
+  }
+  
   #topBtn {
     bottom: 15px;
     right: 30px;
