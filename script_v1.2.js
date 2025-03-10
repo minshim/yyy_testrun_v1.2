@@ -1,15 +1,65 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const titles = document.querySelectorAll(".title");
-    
-    titles.forEach(function (title) {
-        title.addEventListener("click", function () {
-            // Find the corresponding gallery for the clicked title
-            const gallery = title.nextElementSibling;
-            if (gallery && gallery.classList.contains("gallery")) {
-                gallery.classList.toggle("hidden");
-            }
-        });
-    });
+  const titles = document.querySelectorAll(".title");
+  const showAllBtn = document.getElementById("showAllBtn");
+
+  // Toggle individual galleries and details when clicking titles
+  titles.forEach(function (title) {
+      title.addEventListener("click", function () {
+          const gallery = title.nextElementSibling;
+          const details = title.querySelector(".details");
+
+          // Toggle gallery visibility
+          if (gallery && gallery.classList.contains("gallery")) {
+              gallery.classList.toggle("hidden");
+          }
+
+          // Toggle details visibility (opacity 0 or 1)
+          if (details) {
+              details.style.opacity = details.style.opacity === "1" ? "0" : "1";
+          }
+      });
+  });
+
+  // Show or hide all images when clicking the "Show All" button
+  showAllBtn.addEventListener("click", function () {
+      const galleries = document.querySelectorAll(".gallery");
+      const details = document.querySelectorAll(".details");
+      let allVisible = true;
+
+      // Check if all galleries are visible
+      galleries.forEach(function (gallery) {
+          if (gallery.classList.contains("hidden")) {
+              allVisible = false;
+          }
+      });
+
+      // Check if all details are visible
+      details.forEach(function (detail) {
+          if (detail.style.opacity === "0") {
+              allVisible = false;
+          }
+      });
+
+      if (allVisible) {
+          // Hide all galleries and details
+          galleries.forEach(function (gallery) {
+              gallery.classList.add("hidden"); // Hide galleries
+          });
+          details.forEach(function (detail) {
+              detail.style.opacity = "0"; // Hide details
+          });
+          showAllBtn.textContent = "OPEN"; // Change button text to "OPEN"
+      } else {
+          // Show all galleries and details
+          galleries.forEach(function (gallery) {
+              gallery.classList.remove("hidden"); // Show galleries
+          });
+          details.forEach(function (detail) {
+              detail.style.opacity = "1"; // Show details
+          });
+          showAllBtn.textContent = "CLOSE"; // Change button text to "CLOSE"
+      }
+  });
 });
 
 
