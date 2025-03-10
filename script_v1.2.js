@@ -222,7 +222,6 @@ const galleryData = {
 // --- about there 1/2 //
 15: [
   { src: "bau/img/10.4_NaoyaMatsumoto/IMG_9370.jpg", caption: "" },
-  { src: "bau/img/10.4_NaoyaMatsumoto/IMG_9371.jpg", caption: "" },
   { src: "bau/img/10.4_NaoyaMatsumoto/IMG_9358.jpg", caption: "" },
   { src: "bau/img/10.4_NaoyaMatsumoto/IMG_9371.jpg", caption: "" },
   { src: "bau/img/10.4_NaoyaMatsumoto/IMG_9372.jpg", caption: "" },
@@ -242,7 +241,6 @@ const galleryData = {
 ],
 // --- NewHabitations //
 17: [
-    { src: "bau/img/11_NewHabitations/DSC_6423_in.jpg", caption: "" },
     { src: "bau/img/11_NewHabitations/DSC_6418_in.jpg", caption: "" },
     { src: "bau/img/11_NewHabitations/DSC_6423_in.jpg", caption: "" },
     { src: "bau/img/11_NewHabitations/DSC_6432_in.jpg", caption: "" },
