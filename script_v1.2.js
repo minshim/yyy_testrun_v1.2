@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const galleryData = {
   1: [
     { src: "bau/img/01_GATEWAY-2015-01/IMG_7571.jpg", caption: "" },
-    { src: "bau/img/01_GATEWAY-2015-01/IMG_7585.jpg", caption: "" },
+    { src: "bau/img/01_GATEWAY-2015-01/IMG_7585.JPG", caption: "" },
     { src: "bau/img/01_GATEWAY-2015-01/IMG_7593.jpg", caption: "" },
     { src: "bau/img/01_GATEWAY-2015-01/IMG_7582.jpg", caption: "" },
     { src: "bau/img/01_GATEWAY-2015-01/IMG_7280.jpg", caption: "" },
