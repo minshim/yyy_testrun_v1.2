@@ -298,11 +298,12 @@ width: 100%; /* Adjust width as needed */
   color: var(--yyy-gray)
 }
 
+
 video {
-  pointer-events: none;
+  pointer-events: none;  /* タップ操作を無効化 */
+  user-select: none;  /* ユーザーが選択できないようにする */
+  touch-action: none;  /* iOS/Androidでの誤タップ対策 */
 }
-
-
 
 
 
