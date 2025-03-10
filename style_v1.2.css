@@ -51,8 +51,10 @@ a:active {
   cursor: pointer;
 } 
 
-.yyy-logo:hover {
-  background-blend-mode: none;
+@media only screen and (max-width: 500px){
+  .yyy-logo {
+    top: 70%;
+  }
 }
 
 /* body::before {
