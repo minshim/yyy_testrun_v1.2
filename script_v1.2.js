@@ -584,6 +584,7 @@ function addImage(event) {
       newVideo.controls = false;
       newVideo.style.overflow = "hidden";
       newFigure.appendChild(newVideo);
+      newVideo.setAttribute("playsinline", "true"); 
     } else {
       const newImage = document.createElement("img");
       newImage.src = images[currentIndex].src;
