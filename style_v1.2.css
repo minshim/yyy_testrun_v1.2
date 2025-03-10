@@ -86,7 +86,7 @@ a:active {
   flex-wrap: wrap; /* Allow images to wrap */
   justify-content: flex-start; /* Float images when zoomed out */
   position: relative;
-  cursor: default;
+   cursor: crosshair;
   margin-top: 0;
   margin-bottom: 0px;
   margin-left: 0;
@@ -98,7 +98,6 @@ a:active {
   display: block; /* Allow the images to float */
   width: 100%;  /* Let images scale naturally */
   height: auto;  
-  cursor: pointer;
 }
 
 
