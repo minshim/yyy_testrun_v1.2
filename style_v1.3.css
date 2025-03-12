@@ -39,8 +39,8 @@ a:active {
 
 .yyy-logo {
   position: fixed;
-  top: 70%;
-  right: 20%;
+  top: 80%;
+  left: 26%;
   transform: translate(-50%, -50%);
   width: 35px; /* 画像サイズに調整 */
   height: 35px;
